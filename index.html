@@ -20,7 +20,7 @@
         The object is to reach your goal number by clicking the crystals. If you go over your goal number you lose.</p>
     </div>
 
-    <!-- Panel for random number and score -->
+    <!-- Panel for random number, current score and scoreboard -->
     <div class="panel panel-default">
         <div class="panel-heading">Your Goal Number</div>
         <div class="panel-body">
@@ -35,34 +35,44 @@
         <div class="panel-body">
             <div id="score"></div> <!-- push JS score to this HTML element -->
         </div>
+        
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Wins and Losses</h3>
+        </div>
+        <div class="panel-body">
+            <div id="wins">Wins: </div><br>
+            <div id="losses">Losses: </div>
+        </div>
+
     </div>
     
     <!-- Thumbnails for images of Crystals -->
     <div class="row">
         <!-- Crystal Gayle -->
         <div class="col-md-1">
-            <a href="" class="thumbnail">
+            <a href="" class="thumbnail crystal">
             <img src="assets/images/CrystalGayle.jpg" alt="Crystal Gayle">
             Crystal Gayle
             </a>
         </div>
         <!-- Crystal Bernard -->
         <div class="col-md-1">
-                <a href="" class="thumbnail">
+                <a href="" class="thumbnail crystal">
                 <img src="assets/images/CrystalBernard.jpg" alt="Crystal Bernard">
                 Crystal Bernard
                 </a>
             </div>
         <!-- Crystal Renn -->
         <div class="col-md-1">
-                <a href="" class="thumbnail">
+                <a href="" class="thumbnail crystal">
                 <img src="assets/images/CrystalRenn.jpg" alt="Crystal Renn">
                 Crystal Renn
                 </a>
             </div>
         <!-- Crystal Bowersox -->
         <div class="col-md-1">
-                <a href="" class="thumbnail">
+                <a href="" class="thumbnail crystal">
                 <img src="assets/images/CrystalBowersox.jpg" alt="Crystal Bowersox">
                 Crystal Bowersox
                </a>
@@ -70,6 +80,8 @@
     </div>
     
     
-    
+    <!-- JavaScript Link  -->
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+
 </body>
 </html>
