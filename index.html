@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystals Collector Game</title>
+    
+    <!-- link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Jumbotron for header and instructions -->
+    <div class="jumbotron">
+        <h2><u>Crystals Collector Game</u></h2>
+        <h3>Instructions:</h3>
+        <p>You will be given a random number at the start of the game: your goal number.<br>
+        There are four Crystals on the page, and each one is assigned a number that is hidden from you.<br>
+        The object is to reach your goal number by clicking the crystals. If you go over your goal number you lose.</p>
+    </div>
+
+    <!-- Panel for random number and score -->
+    <div class="panel panel-default">
+        <div class="panel-heading">Your Goal Number</div>
+        <div class="panel-body">
+            <div id="goal"></div> <!-- push JS goal to this HTML element -->
+        </div>
+        </div>
+        
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Your Current Score</h3>
+        </div>
+        <div class="panel-body">
+            <div id="score"></div> <!-- push JS score to this HTML element -->
+        </div>
+    </div>
+    
+    <!-- Thumbnails for images of Crystals -->
+    <div class="row">
+        <!-- Crystal Gayle -->
+        <div class="col-md-1">
+            <a href="" class="thumbnail">
+            <img src="assets/images/CrystalGayle.jpg" alt="Crystal Gayle">
+            Crystal Gayle
+            </a>
+        </div>
+        <!-- Crystal Bernard -->
+        <div class="col-md-1">
+                <a href="" class="thumbnail">
+                <img src="assets/images/CrystalBernard.jpg" alt="Crystal Bernard">
+                Crystal Bernard
+                </a>
+            </div>
+        <!-- Crystal Renn -->
+        <div class="col-md-1">
+                <a href="" class="thumbnail">
+                <img src="assets/images/CrystalRenn.jpg" alt="Crystal Renn">
+                Crystal Renn
+                </a>
+            </div>
+        <!-- Crystal Bowersox -->
+        <div class="col-md-1">
+                <a href="" class="thumbnail">
+                <img src="assets/images/CrystalBowersox.jpg" alt="Crystal Bowersox">
+                Crystal Bowersox
+               </a>
+            </div>
+    </div>
+    
+    
+    
+</body>
+</html>
