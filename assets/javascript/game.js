@@ -11,7 +11,10 @@ $(document).ready(function(){
 
     var goal;
     var score = 0;
-    var crystalsNum;
+    var gayleNum = 0;
+    var bernardNum = 0;
+    var rennNum = 0;
+    var bowersoxNum = 0;
     var win = 0;
     var losses = 0;
 
