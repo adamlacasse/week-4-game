@@ -35,9 +35,14 @@ $(document).ready(function(){
     console.log("bowersoxNum: " + bowersoxNum);
     
     // Map Crystal numbers to click events; push to score variable ==================
+    function theGame(){
+        $("#gayleNum").click(function(){
+            score = score + gayleNum;
+            console.log("score:" + score);
+        });
+    }
 
-    $("#gayleNum").click(goal = goal + gayleNum);
-    console.log("goal:" + goal);
+    
 
 
 });

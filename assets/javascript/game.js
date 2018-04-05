@@ -1,80 +1,66 @@
-
-// document.getElementById("goal").innerHTML = 5 + 6;
-
-// cheat sheet: https://github.com/bavely/week-4-game/blob/master/assets/javascript/game.js
-
 	
 $(document).ready(function(){
 
-    // $("p").hide();
-    // $("p").fadeIn(1000);
-
     var goal;
-    var score = 0;
-    var gayleNum = 0;
-    var bernardNum = 0;
-    var rennNum = 0;
-    var bowersoxNum = 0;
+    var crystalsNum;
     var win = 0;
     var losses = 0;
-
-    // var audio = new Audio("../week-4-game/assets/images/Computer Mouse.wav");
-    // var backGround = new Audio("../week-4-game/assets/images/Soundimage.org.mp3");
-    // backGround.loop=true;
-    // backGround.play();
+    var score = 0;
 
     function startOver() {
-
         score = 0;
 
-        goal = Math.floor(Math.random() * 102 ) + 19;
+        goal = Math.floor(Math.random() * 100 )+ 1;
+        console.log("goal: " + goal);
 
         $("#goal").html(goal);
         $("#score").html(score);
     }
 
     function newcrystalNum(){
-        crystalsNum = Math.floor(Math.random() * 12 ) + 1;
+        crystalsNum = Math.floor(Math.random() * 12 )+ 1;
     }
 
-    // var crystalsimgUrl =["assets/images/black.jpg", "assets/images/red.jpg", "assets/images/blue.jpg", "assets/images/green.jpg"];
+    var crystalsimgUrl =["assets/images/CrystalGayle.jpg", "assets/images/CrystalBernard.jpg", "assets/images/CrystalBowersox.jpg", "assets/images/CrystalRenn.jpg"];
 
-    // for (var i = 0; i < crystalsimgUrl.length; i++) {
+    for (var i = 0; i < crystalsimgUrl.length; i++) {
+        var crystalsImg = $("<img>"); // creates variable crystalsImg, then adds various attributes and classes
+        crystalsImg.attr("src", crystalsimgUrl[i]); // REMEMBER THIS IS THE ONLY THING THAT IS DIFFERENT FOR EACH (other than random #)
+        crystalsImg.addClass("crystal-image");
+        newcrystalNum();
+        crystalsImg.attr("data-crystalvalue", crystalsNum);
+        // WTF am I doing?
+            var crystalsNames = ["Crystal Gayle", "Crystal Bernard", "Crystal Bowersox", "Crystal Renn"];
+            for (var n = 0; n < 2; n++){
+            var targetName = crystalsNames[n];
+            }
+        crystalsImg.attr("title", targetName);
 
-    //     var crystalsImg = $("<img>");
 
-    //     crystalsImg.attr("src", crystalsimgUrl[i]);
+        $("#crystals").append(crystalsImg); // adds the Crystals one after the other to the #crystals HTML element
+        
+    }
 
-    //     crystalsImg.addClass("crystal-image img-circle");
-
-    //     newcrystalNum();
-    //     crystalsImg.attr("data-crystalvalue", crystalsNum);
-
-    //     $("#crystals").append(crystalsImg);
-    // }
     startOver();
 
-    $(".crystal").on("click", function() {
-        //audio.play();
-
+    $(".crystal-image").on("click", function() { // ok
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
-        score += crystalValue;
+        score	+= crystalValue;
         console.log(score);
-        $("#score").html("<h3> " + score + "</h3>");
+        $("#score").html(score);
 
         if (goal === score) {
             win++
-            $("#wins").html("<h3> Wins: " + win + "</h3>");
+            $("#wins").html("Wins: " + win);
             startOver();
         }
 
-        if (goal < score){
+        if ( goal < score){
             losses++
-            $("#losses").html("<h3> Losses: " + losses + "</h3>");
+            $("#losses").html("Losses: " + losses);
             startOver();
         }
     });
 
 });
-
